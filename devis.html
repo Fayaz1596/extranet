@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>SpeedTarif</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/devis.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-free-5.9.0-web/css/all.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vsa0nve.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      
+    <div class="be-wrapper be-fixed-sidebar">
+        
+        <nav class="navbar navbar-expand fixed-top be-top-header">
+            <div class="container-fluid">
+                <div class="be-navbar-header">
+                    <a class="navbar-brand pl-4 pr-4" style="width: 13.5rem; background-image: none;" href="#">
+                        <img src="assets/img/logo.png"/>
+                    </a>
+                </div>
+                <div class="be-right-navbar">
+                    <a class="navbar-brand pl-2 pr-4 mt-auto mb-auto" style="width: 13.5rem; background-image: none;" href="#">
+                        <img src="assets/img/logo.png"/>
+                    </a>
+                    <ul class="nav navbar-nav float-right be-user-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <img src="assets/img/avatar1.png" alt="Avatar">
+                                <span class="user-name"></span>
+                            </a>
+                            <div class="dropdown-menu utilisateur" role="menu">     
+                                <div class="user-info pl-md-4 pr-md-4 pt-md-3 pb-md-3 pl-3 pr-3 pt-2 pb-2 mb-1">
+                                    <div class="user-name">Testeur</div>
+                                </div>
+                                <a class="dropdown-item pt-md-2 pl-md-4 pr-md-4 pb-md-2 pt-1 pl-3 pr-3 pb-1" href="#">
+                                    <span class="icon mdi mdi-face"></span>Compte
+                                </a>
+                                <a class="dropdown-item pt-md-2 pl-md-4 pr-md-4 pb-md-2 pt-1 pl-3 pr-3 pb-1" href="#">
+                                    <span class="icon mdi mdi-power"></span>Se déconnecter
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="be-left-sidebar pb-0 mt-0 h-auto mb-xl-8 mb-0" id="normal">
+            <div class="left-sidebar-wrapper">
+                <a class="left-sidebar-toggle pl-4 pr-4" href="#">Menu</a>
+                <div class="left-sidebar-spacer">
+                    <div class="left-sidebar-scroll">
+                        <div class="left-sidebar-content row m-0 pb-0">
+                            <div class="w-100 align-self-start">
+                                <ul class="sidebar-elements mt-5">
+                                    <li class="accueil pt-2 pb-2 ml-xl-2 mr-xl-2 pl-1 pl-lg-0 pl-md-0 pl-xl-1">
+                                        <button class="bouton">
+                                            <i class="icon mdi mdi-chevron-right image1_bouton m-0 pl-xl-0 pl-1"></i><i class="icon mdi mdi-chevron-right pr-xl-2 pr-lg-0 pr-md-0 pr-2 mr-xl-1 mr-lg-0 mr-md-0 mr-0 image2_bouton"></i>
+                                            <a href="accueil.html"><span>ACCUEIL</span></a>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-100 align-self-start">
+                                <ul class="sidebar-elements">
+                                    <li class="pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="gestionnaires.html">
+                                            <i class="icon mdi mdi-accounts-alt pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes gestionnaires</span>
+                                        </a>
+                                    </li>
+                                    <li class="parent pt-xl-2 pb-xl-2 ml-xl-2 mr-xl-2">
+                                        <a href="#" class="hidden">
+                                            <i class="icon mdi mdi-shopping-cart pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mon activité</span>
+                                        </a>
+                                        <ul class="sub-menu pt-0 pb-2">
+                                            <li class="pt-1">
+                                                <a href="devis.html">
+                                                    <i class="icon fas fa-folder-plus pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Devis</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt-1">
+                                                <a href="liste_contrats.html">
+                                                    <i class="icon mdi mdi-bookmark pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Contrat</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt-1">
+                                                <a href="supports_de_vente.html">
+                                                    <i class="icon mdi mdi-layers pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Les supports</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt-1">
+                                                <a href="#">
+                                                    <i class="icon mdi mdi-bookmark pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes commissions</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="mobile pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="devis.html">
+                                            <i class="icon fas fa-folder-plus pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Devis</span>
+                                        </a>
+                                    </li>
+                                    <li class="mobile pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="liste_contrats.html">
+                                            <i class="icon mdi mdi-bookmark pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Contrat</span>
+                                        </a>
+                                    </li>
+                                    <li class="mobile pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="supports_de_vente.html">
+                                            <i class="icon mdi mdi-layers pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Les supports</span>
+                                        </a>
+                                    </li>
+                                    <li class="mobile pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-bookmark pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes commissions</span>
+                                        </a>
+                                    </li>
+                                    <li class="pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-refresh-alt pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Réseaux de franchise</span>
+                                        </a>
+                                    </li>
+                                    <li class="pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="#">
+                                            <i class="icon fas fa-handshake pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes partenaires</span>
+                                        </a>
+                                    </li>
+                                    <li class="pt-xl-2 pb-xl-2 pt-1 pb-1 ml-xl-2 mr-xl-2">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-desktop-windows pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Gestion des bornes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-100 align-self-end">
+                                <ul class="sidebar-elements">
+                                    <li class="ml-xl-2 mr-xl-2 pt-2 pb-2 deconnecter">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-power pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Se déconnecter</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="be-left-sidebar pb-0 mt-0 h-auto mb-xl-8 mb-0" id="tablette">
+            <div class="left-sidebar-wrapper">
+                <div class="left-sidebar-spacer">
+                    <div class="left-sidebar-scroll mostly-customized-scrollbar overflow-auto">
+                        <div class="left-sidebar-content row m-0 pb-0">
+                            <div class="w-100 align-self-start">
+                                <ul class="sidebar-elements mt-5 mt-lg-0 mt-md-0">
+                                    <li class="accueil pt-2 pb-2 ml-2 mr-2 pl-1 pl-lg-0 pl-md-0 pl-xl-1">
+                                        <button class="bouton">
+                                            <i class="icon mdi mdi-chevron-right image1_bouton m-0 pl-xl-0 pl-1"></i><i class="icon mdi mdi-chevron-right pr-xl-3 pr-lg-0 pr-md-0 pr-3 m-0 image2_bouton"></i>
+                                            <a href="accueil.html"><span>ACCUEIL</span></a>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-100 align-self-start">
+                                <ul class="sidebar-elements">
+                                    <li class="pt-2 pb-2 ml-2 mr-2">
+                                        <a href="gestionnaires.html">
+                                            <i class="icon mdi mdi-accounts-alt pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes gestionnaires</span>
+                                        </a>
+                                    </li>
+                                    <li class="parent pt-2 pb-2 ml-2 mr-2">
+                                        <a href="#" class="hidden">
+                                            <i class="icon mdi mdi-shopping-cart pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mon activité</span>
+                                        </a>
+                                        <ul class="sub-menu pt-0 pb-0">
+                                            <li class="pt-1">
+                                                <a href="devis.html">
+                                                    <i class="icon fas fa-folder-plus pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span class="active">Devis</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt-1">
+                                                <a href="liste_contrats.html">
+                                                    <i class="icon mdi mdi-bookmark pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Contrat</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt-1">
+                                                <a href="#">
+                                                    <i class="icon mdi mdi-layers pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Les supports</span>
+                                                </a>
+                                            </li>
+                                            <li class="pt-1">
+                                                <a href="#">
+                                                    <i class="icon mdi mdi-bookmark pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes commissions</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pt-2 pb-2 ml-2 mr-2">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-refresh-alt pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Réseaux de franchise</span>
+                                        </a>
+                                    </li>
+                                    <li class="pt-2 pb-2 ml-2 mr-2">
+                                        <a href="#">
+                                            <i class="icon fas fa-handshake pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Mes partenaires</span>
+                                        </a>
+                                    </li>
+                                    <li class="pt-2 pb-2 ml-2 mr-2">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-desktop-windows pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Gestion des bornes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-100 align-self-end">
+                                <ul class="sidebar-elements">
+                                    <li class="ml-2 mr-2 pt-2 pb-2 deconnecter">
+                                        <a href="#">
+                                            <i class="icon mdi mdi-power pr-xl-2 pr-lg-0 mr-lg-0 pr-md-0 mr-md-0 mr-xl-2 mr-2 image"></i><span>Se déconnecter</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="be-content">
+            <div class="main-content container-fluid">
+                <div class="row">
+                <div class="col-12">
+                  <div class="card-header pt-1 pb-3">
+                    <div class="col-lg-8 col-12 p-0 text-md-left text-center">
+                        <h4 class="pl-2 mb-1 col-lg-8">Tous les devis</h4>
+                        <span class="card-subtitle pl-md-2">Les devis ci-dessous sont en attentes de traitement</span>
+                    </div>
+                  </div>
+                  <div class="card card-table">
+                    <div class="row pt-5 pb-5 m-0">
+                        <div class="input-group recherche col-sm-8 col-8 m-auto p-0">
+                            <input class="form-control pt-1 pb-1 pl-2 pr-2" type="text" placeholder="Rechercher par nom/email/n° de contrat...">
+                            <div class="input-group-append-sm">
+                                <button class="btn btn-primary" type="button"><span class="mdi mdi-search align-middle"></span></button>
+                            </div>
+                            <div class=" align-self-center text-center p-0 filtre">
+                               <a href="#" class="ml-2 mr-1" style="color: #5c84f0;"><span class="mdi mdi-filter-list m-auto align-middle pr-1"></span>filtrer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body ml-6 mr-6 pt-2 mb-7">
+                      <table class="table table-borderless table-striped m-sm-auto">
+                        <thead>
+                          <tr>
+                            <th>Nom et prénom</th>
+                            <th>Type de produit</th>
+                            <th>Source</th>
+                            <th>Date et heure de création</th>
+                            <th>Statut</th>
+                            <th class="actions text-right"><button class="btn btn-primary mb-1"><i class="icon icon-left mdi mdi-plus mr-xl-3 mr-2"></i>Nouveau devis</button></th>
+                          </tr>
+                        </thead>
+                        <tbody class="no-border-x">
+                          <tr>
+                            <td>Laura Sofia Urena</td>
+                            <td>Assurance auto</td>
+                            <td>Borne</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-warning traiter pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-spinner mr-3"></i>
+                                    <span>&#192; traiter</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Igor Antonovich</td>
+                            <td>Assurance auto</td>
+                            <td>Borne</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-warning traiter pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-spinner mr-3"></i>
+                                    <span>&#192; traiter</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Phet Putrie</td>
+                            <td>Assurance auto</td>
+                            <td>Site web</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-warning traiter pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-spinner mr-3"></i>
+                                    <span>&#192; traiter</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Alice Krejcova</td>
+                            <td>Assurance auto</td>
+                            <td>Borne</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-warning traiter pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-spinner mr-3"></i>
+                                    <span>&#192; traiter</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Phet Putrie</td>
+                            <td>Assurance auto</td>
+                            <td>Site web</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-warning traiter pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-spinner mr-3"></i>
+                                    <span>&#192; traiter</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Alice Krejcova</td>
+                            <td>Assurance auto</td>
+                            <td>Borne</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-warning traiter pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-spinner mr-3"></i>
+                                    <span>&#192; traiter</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Phet Putrie</td>
+                            <td>Assurance auto</td>
+                            <td>Site web</td>
+                            <td>10/07/2019</td>
+                            <td>
+                                <button class="btn btn-success envoyer pl-2 pr-2">
+                                    <i class="icon icon-left mdi mdi-mail-send mr-3"></i>
+                                    <span>Envoyé</span>
+                                </button>
+                            </td>
+                            <td class="actions text-right">
+                                <a class="icon" href="#"><i class="mdi mdi-edit pl-2 pr-2" style="color: #4e4e4e; font-size: 20px;"></i></a>
+                                <a class="icon" href="#"><i class="mdi mdi-close pl-2 pr-2" style="color: #b70000; font-size: 20px;"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="mt-8 ml-6 mr-6 pb-3">
+                        <nav>
+                            <ul class="pagination justify-content-end">
+                              <li class="page-item ml-1"><a class="page-link" href="#" aria-label="Previous"><span class="mdi mdi-chevron-left" aria-hidden="true"></span></a></li>
+                              <li class="page-item active ml-1"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item ml-1"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item ml-1"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item ml-1"><a class="page-link" href="#" aria-label="Next"><span class="mdi mdi-chevron-right" aria-hidden="true"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script> 
+    <script src="assets/js/page.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            App.init();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>SpeedTarif</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/etape.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/vsa0nve.css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome-free-5.9.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  </head>
+  <body>
+    <div class="be-wrapper be-fixed-sidebar">
+        
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a class="navbar-brand" href="#" style="width: 18rem;"></a>
+          </div>
+          <div class="page-title"><span class="pl-6 en-tete"><i class="icon mdi mdi-chevron-right mr-3"></i>Créer un nouveau devis</span></div>
+          <div class="be-right-navbar">
+            <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/avatar1.png" alt="Avatar"><span class="user-name"></span></a>
+                <div class="dropdown-menu utilisateur" role="menu">     
+                  <div class="user-info">
+                    <div class="user-name">Testeur</div>
+                  </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Compte</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        
+      <div class="be-left-sidebar pb-0 mt-0 h-auto mb-md-8 mb-0">
+        <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle pl-3 pr-3" href="#">Créer un nouveau devis</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content row m-0 pb-0 align-content-between flex-wrap">
+                <div class="w-100">
+                    <ul class="sidebar-elements pb-3">
+                      <li><a href="#"><i class="icon mdi mdi-accounts-alt"></i><span>Mes gestionnaires</span></a>
+                      </li>
+                      <li class="parent"><a href="#"><i class="icon mdi mdi-shopping-cart"></i><span>Mon activité</span></a>
+                        <ul class="sub-menu pt-0 pb-7">
+                          <li><a href="etape1.html"><i class="icon fas fa-folder-plus"></i><span>Créer un devis</span></a>
+                          </li>
+                          <li><a href="liste_contrats.html"><i class="icon mdi mdi-bookmark"></i><span>Les contrats</span></a>
+                          </li>
+                          <li><a href="#"><i class="icon mdi mdi-layers"></i><span>Les supports</span></a>
+                          </li>
+                          <li><a href="#"><i class="icon mdi mdi-bookmark"></i><span>Mes commissions</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#"><i class="icon mdi mdi-refresh-alt"></i><span>Réseaux de franchise</span></a>
+                      </li>
+                      <li><a href="#"><i class="icon fas fa-handshake"></i><span>Mes partenaires</span></a>
+                      </li>
+                      <li><a href="#"><i class="icon mdi mdi-desktop-windows"></i><span>Gestion des bornes</span></a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="w-100">
+                    <ul class="sidebar-elements deconnecter pt-1 pb-1">
+                        <li><a href="#"><i class="icon mdi mdi-power"></i><span>Se déconnecter</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="be-content">
+        <div class="main-content container-fluid">
+            <div class="row">
+             <div class="col-xl-12">
+              <div class="card card-border-color card-border-color-primary">
+                <div class="card-header card-header-divider titre">Créer un nouveau devis<span class="card-subtitle sous_titre">Produit auto</span></div>
+                 <div class="card-body">
+                    <div class="row">
+                        
+                      <div class="col-xl-7 fuelux mb-2">
+                          <div class="block-wizard">
+                            <div class="wizard wizard-ux" id="wizard1">
+                              <div class="step-content pt-0 pb-0 pl-1 pr-1">
+                                <div class="step-pane active" data-step="1">
+                                  <div class="container">
+                                    <form class="form-horizontal group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                        <h4 class="mb-4 text-left offset-xl-1">Informations sur le véhicule</h4>
+                                        <div class="row">
+                                            <div class="col-xl-10 cadre ml-0 mr-0 mb-4 d-flex align-content-between flex-wrap" style="height: 46em;">
+                                                <div class="align-self-start pl-0 pr-0 w-100">
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center" for="inputPlaceholder3">N° d'immatriculation</label>
+                                                      <div class="col-xl-4">
+                                                        <input class="form-control" type="text" id="champ" placeholder="AA-229-AA">
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center" for="inputPlaceholder3">Date de permis</label>
+                                                      <div class="col-xl-4">
+                                                        <input class="form-control date datetimepicker" type="text" data-mask="date" placeholder="JJ/MM/AAAA" data-min-view="2" data-date-format="dd-mm-yyyy" id="champ">
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center">Marque</label>
+                                                      <div class="col-xl-6 select">
+                                                        <select class="select2" id="case">
+                                                            <option value="">...</option>
+                                                            <option value="test">Test</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center">Modèle</label>
+                                                      <div class="col-xl-6 select">
+                                                        <select class="select2" id="case">
+                                                            <option value="">...</option>
+                                                            <option value="test">Test</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Version</label>
+                                                      <div class="col-xl-6 select">
+                                                        <select class="select2" id="case">
+                                                            <option value="">...</option>
+                                                            <option value="test">Test</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Puissance fiscale</label>
+                                                      <div class="col-xl-6 select" id="case">
+                                                        <select class="select2">
+                                                            <option value="">...</option>
+                                                            <option value="test">Test</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>  
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Type mines</label>
+                                                      <div class="col-xl-6">
+                                                        <input class="form-control" type="text" id="champ" placeholder="ZLA84300002036508">
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-group row pt-1">
+                                                      <label class="col-xl-5 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Usage du véhicule</label>
+                                                      <div class="col-xl-6 select">
+                                                        <select class="select2" id="case">
+                                                            <option value="">...</option>
+                                                            <option value="test">Test</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-3 col-xl-11 pb-4 pl-0 pr-0 text-right w-100">
+                                                    <button class="btn btn-space wizard-previous btn-secondary gris disabled pl-6 pr-6" type="button" data-wizard="#wizard1"><span></span>Retour</button>
+                                                    <button class="btn btn-space wizard-next btn-primary violet pl-6 pr-6" type="button" data-wizard="#wizard1">Suivant</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                                <button class="btn wizard-next" type="button" data-wizard="#wizard1"><i class="icon mdi mdi-chevron-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                  </div>
+                                </div>
+                                <div class="step-pane" data-step="2">
+                                 <div class="container">
+                                  <form class="form-horizontal group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                  <h4 class="mb-4 text-left offset-xl-1">Données sur le permis de conduire</h4>
+                                  <div class="row">
+                                      <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                          <button class="btn wizard-previous" type="button" data-wizard="#wizard1"><i class="icon mdi mdi-chevron-left"></i></button>
+                                      </div>
+                                      <div class="col-xl-8 cadre ml-0 mr-0 mb-4 d-flex align-content-between flex-wrap" style="height: 46em;">
+                                          <div class="pl-0 pr-0 w-100">
+                                              <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center">Pays de délivrance</label>
+                                                  <div class="col-xl-7 select">
+                                                    <select class="selectpicker" data-show-content="true" id="pays">
+                                                        <option value="">...</option>
+                                                        <option data-content="<img src='assets/img/fr.png' class='flag'> France" value="FR"></option>
+                                                    </select>
+                                                  </div>
+                                              </div>
+                                              <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center" for="inputPlaceholder3">Date de permis</label>
+                                                  <div class="col-xl-5">
+                                                    <input class="form-control date datetimepicker" type="text" data-mask="date" placeholder="JJ/MM/AAAA" data-min-view="2" data-date-format="dd-mm-yyyy" id="champ">
+                                                  </div>
+                                                </div>
+                                              <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center">Bonus / malus</label>
+                                                  <div class="col-xl-7">
+                                                    <select class="select2 select2-hidden-accessible" multiple="" tabindex="-1" aria-hidden="true" id="case">
+                                                        <option value="1.25">1.25%</option>
+                                                    </select>
+                                                  </div>
+                                              </div>
+                                              <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-sm-0 col-form-label text-xl-right text-left align-self-center">Permis accompagnée</label>
+                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                      </label>
+                                                      <label class="btn ml-7 pl-5 pr-5 active" id="choix">
+                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                      </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="mt-3 col-xl-11 pb-4 pl-0 pr-0 text-right w-100">
+                                             <button class="btn btn-space wizard-previous btn-secondary gris pl-6 pr-6" type="button" data-wizard="#wizard1"><span></span>Retour</button>
+                                             <button class="btn btn-space wizard-next btn-primary violet pl-6 pr-6" type="button" data-wizard="#wizard1">Suivant</button>
+                                          </div>
+                                       </div>
+                                       <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                            <button class="btn wizard-next" type="button" data-wizard="#wizard1"><i class="icon mdi mdi-chevron-right"></i></button>
+                                       </div>
+                                    </div>
+                                  </form>
+                                </div>
+                               </div>
+                                <div class="step-pane" data-step="3">
+                                 <div class="container">
+                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                  <h4 class="mb-4 text-left offset-xl-1">Données sur le permis de conduire</h4>
+                                  <div class="row">
+                                      <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                          <button class="btn wizard-previous" type="button" data-wizard="#wizard1"><i class="icon mdi mdi-chevron-left"></i></button>
+                                      </div>
+                                      <div class="col-xl-10 cadre ml-0 mr-0 mb-4 d-flex align-content-between flex-wrap" style="height: 46em;">
+                                          <div class="pl-0 pr-0 w-100">
+                                              <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                      </label>
+                                                      <label class="btn ml-7 pl-5 pr-5 active" id="choix">
+                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                      </label>
+                                                  </div>
+                                               </div>
+                                                <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                  <div class="col-xl-6 select">
+                                                    <select class="select2" id="case">
+                                                        <option value="">...</option>
+                                                        <option value="Test">Test</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                  <div class="col-xl-6 select">
+                                                    <select class="select2" id="case">
+                                                        <option value="">...</option>
+                                                        <option value="Test">Test</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row pt-1">
+                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                  <div class="col-xl-6 select">
+                                                    <select class="select2" id="case">
+                                                        <option value="">...</option>
+                                                        <option value="Test">Test</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 col-xl-10 pb-4 pr-0 text-right w-100">
+                                                <button class="btn wizard-previous btn-space btn-secondary gris pl-6 pr-6" type="button" data-wizard="#wizard1"><span></span>Retour</button>
+                                                <button class="btn btn-space btn-success violet pl-6 pr-6" type="button" data-wizard="#wizard1" disabled="true">Suivant</button>
+                                            </div>
+                                       </div>
+                                    </div>
+                                  </form>
+                                </div>
+                               </div>
+                              </div>
+                              <div class="steps-container">
+                                <ul class="steps">
+                                  <li class="active" data-step="1"></li>
+                                  <li data-step="2"></li>
+                                  <li data-step="3"></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-xl-5 prix mb-8">
+                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                <div class="col-xl-9 col-11 mt-4 mb-0 pr-0 text-right pt-2 pb-0 boutons group-bouton"> 
+                                    <button class="btn btn-primary pl-3 pr-3 tarif_prix active" id="mois" type="button">tarif/mois</button>
+                                    <button class="btn btn-primary pl-3 pr-3 tarif_prix" id="an" type="button">tarif/an</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                    </div>
+                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                            <button class="btn btn-primary col-xl-12 bouton_prix active" id="tiers" type="button">au tiers</button>
+                                        </div>
+                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button" id="maxi">maxi</button>
+                                        </div>
+                                        <div class="col-xl-4 col-sm-4 col-12">
+                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button" id="risques">tous risques</button>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between align-items-center pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                        <div class="col-xl-6 col-6 contrat text-left pr-1" id="proposition">
+                                            <p>Contrat auto :</p>
+                                        </div>
+                                        <div class="col-xl-4 col-6 contrat text-right" id="nombre">
+                                            <p>25,<span>99</span>€<span>*</span></p>
+                                        </div>
+                                    </div>
+                                    <hr class="ml-3 mr-3">
+                                    <div class="row justify-content-between align-items-center m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                        <div class="col-xl-4 col-6 total text-left">
+                                            <p class="mb-1">€ Total :</p>
+                                        </div>
+                                        <div class="col-xl-4 col-6 total text-right" id="total">
+                                            <p class="mb-1">25,<span>99</span>€<span>*</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                <div class="col-xl-9 col-11">
+                                    <div class="row justify-content-sm-between justify-content-around">
+                                        <p class="p-0 ml-0 mr-1 mb-0 mensuel">*Prix mensuel</p>
+                                        <button class="btn btn-primary vehicule p-0 mr-0 ml-1 mt-1 mt-xl-0 mb-0"><i class="icon icon-left mdi mdi-plus"></i>Ajouter un 2ème véhicule</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-12 options pt-7 pb-8">
+                            <h3 class="ml-3 mb-8 titre">Ajouter des options</h3>
+                            <div class="booking_corporelle1 ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row pl-2 pr-2 mb-0">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-2 text-center text-xl-left">Protection corporelle</h3><p class="be-booking-desc-details text-center text-xl-left pb-2 pb-sm-3 pb-md-3 pb-xl-0 m-0">400 000 € - Franchise 10% AIPP</p>
+                                    </div>
+                                    <div class="be-booking-desc col-xl-2 align-self-center">
+                                      <p class="be-booking-desc-details col-xl-12 text-xl-left text-center pl-xl-0 pr-xl-0 pt-sm-4 pt-md-4 m-0">La protection corporelle assure au souscripteur environ 400 000 € - Franchise 10% AIPP</p>
+                                      <a href="#" class="btn btn-link pt-2 pt-sm-2 pt-md-2 col-xl-12 text-center text-xl-right"><u>Voir plus</u></a>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center">
+                                      <div class="be-booking-promo-amount pt-2 pt-sm-6 pt-md-6 pt-xl-0 m-0"><span class="price">2</span><span>€</span><span class="frecuency">/mois</span></div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-6 pt-sm-6 pt-md-6 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-6 pt-sm-6 pt-md-6 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 option_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-8">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Protection corporelle">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button" id="tiers">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button" id="maxi">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button" id="risques">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat protection corporelle :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking_corporelle2 ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row pl-2 pr-2 mb-0">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-2 text-center text-xl-left">Protection corporelle</h3><p class="be-booking-desc-details text-center text-xl-left pb-2 pb-sm-3 pb-md-3 pb-xl-0 m-0">1 000 000 € - Sans franchise</p>
+                                    </div>
+                                    <div class="be-booking-desc col-xl-2 align-self-center">
+                                      <p class="be-booking-desc-details col-xl-12 text-xl-left text-center pl-xl-0 pr-xl-0 pt-sm-4 pt-md-4 m-0">La protection corporelle assure au souscripteur environ 1 000 000 € - Sans franchise</p>
+                                      <a href="#" class="btn btn-link pt-2 pt-sm-2 pt-md-2 col-xl-12 text-center text-xl-right"><u>Voir plus</u></a>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center">
+                                      <div class="be-booking-promo-amount pt-2 pt-sm-6 pt-md-6 pt-xl-0 m-0"><span class="price">5</span><span>€</span><span class="frecuency">/mois</span></div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-6 pt-sm-6 pt-md-6 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-6 pt-sm-6 pt-md-6 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 option_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Protection corporelle">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat protection corporelle :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking_juridique ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row pl-2 pr-2 mb-0">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-2 text-center text-xl-left">Protection juridique</h3><p class="be-booking-desc-details text-center text-xl-left pb-2 pb-sm-3 pb-md-3 pb-xl-0 m-0">Gobale JURIDICA</p>
+                                    </div>
+                                    <div class="be-booking-desc col-xl-2 align-self-center">
+                                      <p class="be-booking-desc-details col-xl-12 text-xl-left text-center pl-xl-0 pr-xl-0 pt-sm-4 pt-md-4 m-0">Être protégé par un juriste en cas de litige, avec les frais pris en charge.</p>
+                                      <a href="#" class="btn btn-link pt-2 pt-sm-2 pt-md-2 col-xl-12 text-center text-xl-right"><u>Voir plus</u></a>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center">
+                                      <div class="be-booking-promo-amount pt-2 pt-sm-6 pt-md-6 pt-xl-0 m-0"><span class="price">7</span><span>€</span><span class="frecuency">/mois</span></div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-6 pt-sm-6 pt-md-6 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-6 pt-sm-6 pt-md-6 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 option_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Protection juridique">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat protection juridique :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking_assistance ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row pl-2 pr-2 mb-0">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-2 text-center text-xl-left">Assistance panne et accident 0 km</h3>
+                                    </div>
+                                    <div class="be-booking-desc col-xl-2 align-self-center">
+                                      <p class="be-booking-desc-details col-xl-12 text-xl-left text-center pt-xl-0 pl-xl-0 pr-xl-0 pt-sm-4 pt-md-4 m-0">Tous les dépannages</p>
+                                      <a href="#" class="btn btn-link pt-2 pt-sm-2 pt-md-2 col-xl-12 text-center text-xl-right"><u>Voir plus</u></a>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center">
+                                      <div class="be-booking-promo-amount pt-2 pt-sm-6 pt-md-6 pt-xl-0 m-0"><span class="price">3</span><span>€</span><span class="frecuency">/mois</span></div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-6 pt-sm-6 pt-md-6 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-6 pt-sm-6 pt-md-6 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 option_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Assistance panne et accident 0 km">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat assistance panne et accident 0 km :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking_vehicule ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row pl-2 pr-2 mb-0">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-2 text-center text-xl-left">Véhicule de remplacement</h3>
+                                    </div>
+                                    <div class="be-booking-desc col-xl-2 align-self-center">
+                                      <p class="be-booking-desc-details col-xl-12 text-xl-left text-center pt-xl-0 pl-xl-0 pr-xl-0 pt-sm-4 pt-md-4 m-0">...</p>
+                                      <a href="#" class="btn btn-link pt-2 pt-sm-2 pt-md-2 col-xl-12 text-center text-xl-right"><u>Voir plus</u></a>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center">
+                                      <div class="be-booking-promo-amount pt-2 pt-sm-6 pt-md-6 pt-xl-0 m-0"><span class="price">2</span><span class="centimes">,99</span><span>€</span><span class="frecuency">/mois</span></div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-6 pt-sm-6 pt-md-6 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-6 pt-sm-6 pt-md-6 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 option_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Véhicule de remplacement">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat véhicule de remplacement :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking_valeur ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row pl-2 pr-2 mb-0">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-2 text-center text-xl-left">Valeur neuf à 12 mois</h3>
+                                    </div>
+                                    <div class="be-booking-desc col-xl-2 align-self-center">
+                                      <p class="be-booking-desc-details col-xl-12 text-xl-left text-center pt-xl-0 pl-xl-0 pr-xl-0 pt-sm-4 pt-md-4 m-0">Indemnisation en cas de vol ou de destruction de votre véhicule suite à un accident</p>
+                                      <a href="#" class="btn btn-link pt-2 pt-sm-2 pt-md-2 col-xl-12 text-center text-xl-right"><u>Voir plus</u></a>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center">
+                                      <div class="be-booking-promo-amount pt-2 pt-sm-6 pt-md-6 pt-xl-0 m-0"><span class="price">2</span><span class="centimes">,99</span><span>€</span><span class="frecuency">/mois</span></div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-6 pt-sm-6 pt-md-6 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-6 pt-sm-6 pt-md-6 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 option_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Valeur neuf à 12 mois">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat valeur neuf à 12 mois :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-12 produit pb-8">
+                            <h3 class="ml-3 mb-8 titre">Ajouter un produit</h3>
+                            <div class="booking_moto ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row mt-1 mb-1 pl-2 pr-2">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-1 pb-sm-6 pb-md-6 pb-xl-0 text-sm-center text-md-center text-xl-left">Assurance moto</h3>
+                                    </div>
+                                    <div class="type col-xl-4 col-4 p-0 align-self-center">
+                                        <div class="col-xl-3 p-0">
+                                            <i class="fas fa-motorcycle col-xl-12 pt-1 text-center"></i>
+                                            <p class="text-center col-xl-12 m-0 pb-2">moto</p>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-5 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-4 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 produit_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                               <div class="step-pane" data-step="1">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Assurance moto">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-3 col-xl-11 pb-4 pr-0 text-right">
+                                                                <button class="btn btn-space btn-secondary gris pl-6 pr-6" type="button" data-wizard="#wizard1"><span></span>Retour</button>
+                                                                <button class="btn btn-space btn-success violet pl-6 pr-6" type="button" data-wizard="#wizard1" disabled="true">Suivant</button>
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                                            <button class="btn wizard-next disabled" type="button"><i class="icon mdi mdi-chevron-right disabled"></i></button>
+                                                       </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                               </div>
+                                              </div>
+                                              <div class="steps-container">
+                                                <ul class="steps">
+                                                  <li class="active" data-step="1"></li>
+                                                  <li data-step="2"></li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat moto :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="booking_habitation ml-2 mr-2 mb-5">
+                                <div class="be-booking-promo flex-sm-column flex-xl-row mt-1 mb-1 pl-2 pr-2">
+                                    <div class="be-booking-desc col-xl-3 align-self-center">
+                                      <h3 class="m-0 pb-1 pb-sm-6 pb-md-6 pb-xl-0 text-sm-center text-md-center text-xl-left">Assurance habitation</h3>
+                                    </div>
+                                    <div class="type col-xl-4 col-4 p-0 align-self-center">
+                                        <div class="col-xl-3 p-0">
+                                            <i class="mdi mdi-home col-xl-12 pt-1 text-center"></i>
+                                            <p class="text-center col-xl-12 m-0 pb-2">habitation</p>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                        <p class="date_titre col-xl-12 pt-5 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                        <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-4 pt-xl-0 text-center">
+                                      <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                      <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                    </div>
+                                </div>
+                                <hr class="sous_separateur m-0">
+                                <div class="col-xl-12 mt-6 produit_plus">
+                                    <div class="row">
+                                        <div class="col-xl-7 fuelux mb-4">
+                                          <div class="block-wizard">
+                                            <div class="wizard wizard-ux" id="wizard1">
+                                              <div class="step-content p-0">
+                                               <div class="step-pane" data-step="1">
+                                                 <div class="container">
+                                                  <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                  <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                  <div class="row">
+                                                      <div class="col-xl-10 cadre mb-4">
+                                                          <div class="pl-0 pr-0">
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                  <div class="col-xl-7 mt-1">
+                                                                    <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Assurance habitation">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                  <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                      <label class="btn pl-5 pr-5" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                      </label>
+                                                                      <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                        <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                      </label>
+                                                                  </div>
+                                                               </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                                <div class="form-group row pt-1">
+                                                                  <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                  <div class="col-xl-7 select">
+                                                                    <select class="select2">
+                                                                        <option value="">...</option>
+                                                                        <option value="Test">Test</option>
+                                                                    </select>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-3 col-xl-11 pb-4 pr-0 text-right">
+                                                                <button class="btn btn-space btn-secondary gris pl-6 pr-6" type="button" data-wizard="#wizard1"><span></span>Retour</button>
+                                                                <button class="btn btn-space btn-success violet pl-6 pr-6" type="button" data-wizard="#wizard1" disabled="true">Suivant</button>
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                                            <button class="btn wizard-next disabled" type="button"><i class="icon mdi mdi-chevron-right disabled"></i></button>
+                                                       </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                               </div>
+                                              </div>
+                                              <div class="steps-container">
+                                                <ul class="steps">
+                                                  <li class="active" data-step="1"></li>
+                                                  <li data-step="2"></li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-xl-5 prix mb-8">
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                    <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                      <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                    </div>
+                                                    <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 m-0">
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                        </div>
+                                                        <div class="col-xl-4 col-sm-4 col-12">
+                                                            <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                        <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                            <p>Contrat habitation :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 contrat text-right">
+                                                            <p>19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="ml-3 mr-3">
+                                                    <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                        <div class="col-xl-4 col-6 total text-left">
+                                                            <p class="mb-1">€ Total :</p>
+                                                        </div>
+                                                        <div class="col-xl-4 col-6 total text-right">
+                                                            <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                <div class="col-xl-9 col-11 p-0">
+                                                    <div class="row justify-content-between m-0 p-0">
+                                                        <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="booking_sante ml-2 mr-2 mb-5">
+                                    <div class="be-booking-promo flex-sm-column flex-xl-row mt-1 mb-1 pl-2 pr-2">
+                                        <div class="be-booking-desc col-xl-3 align-self-center">
+                                          <h3 class="m-0 pb-1 pb-sm-6 pb-md-6 pb-xl-0 text-sm-center text-md-center text-xl-left">Assurance santé</h3>
+                                        </div>
+                                        <div class="type col-xl-4 col-4 p-0 align-self-center">
+                                            <div class="col-xl-3 p-0">
+                                                <i class="mdi mdi-hospital col-xl-12 pt-1 text-center"></i>
+                                                <p class="text-center col-xl-12 m-0 pb-2">santé</p>
+                                            </div>
+                                        </div>
+                                        <div class="be-booking-promo-price col-xl-3 align-self-center">
+                                            <p class="date_titre col-xl-12 pt-5 pt-xl-0 pl-0 pr-0 text-xl-left text-center m-0">Date d'effet du contrat</p>
+                                            <div class="input-group date datetimepicker justify-content-center justify-content-xl-start" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                              <input class="form-control-xs col-xl-6 col-10 noresize" size="16" type="text" value="">
+                                              <div class="input-group-append">
+                                                <button class="btn btn-date pl-2 pr-2"><i class="icon-th mdi mdi-calendar"></i></button>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="be-booking-promo-price col-xl-2 align-self-center text-xl-right pt-4 pt-xl-0 text-center">
+                                          <button class="btn btn-big ajout p-0"><i class="icon mdi mdi-plus-circle pb-2 pt-3"></i>Ajouter</button>
+                                          <button class="btn btn-big suppression p-0"><i class="icon mdi mdi-minus-circle pb-2 pt-3"></i>Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <hr class="sous_separateur m-0">
+                                    <div class="col-xl-12 mt-6 produit_plus">
+                                        <div class="row">
+                                            <div class="col-xl-7 fuelux mb-4">
+                                              <div class="block-wizard">
+                                                <div class="wizard wizard-ux" id="wizard1">
+                                                  <div class="step-content p-0">
+                                                   <div class="step-pane" data-step="1">
+                                                     <div class="container">
+                                                      <form class="group-border-dashed" action="#" data-parsley-namespace="data-parsley-" data-parsley-validate="" novalidate="">
+                                                      <h4 class="mb-4 text-left">Informations sur le véhicule</h4>
+                                                      <div class="row">
+                                                          <div class="col-xl-10 cadre mb-4">
+                                                              <div class="pl-0 pr-0">
+                                                                  <div class="form-group row pt-1">
+                                                                      <label class="col-xl-4 pt-0 col-form-label text-xl-right text-left align-self-center" for="inputReadonly3">Type d'assurance</label>
+                                                                      <div class="col-xl-7 mt-1">
+                                                                        <input class="form-control" id="inputReadonly3" type="text" readonly="readonly" value="Assurance santé">
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group row pt-1">
+                                                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Antécédent d'assurance</label>
+                                                                      <div class="col-xl-8 mt-1 btn-group-toggle" data-toggle="buttons">
+                                                                          <label class="btn pl-5 pr-5" id="choix">
+                                                                            <input type="radio" name="bouton" id="options" autocomplete="off"> OUI
+                                                                          </label>
+                                                                          <label class="btn ml-5 ml-sm-7 pl-5 pr-5 active" id="choix">
+                                                                            <input type="radio" name="bouton" id="options" autocomplete="off" checked> NON
+                                                                          </label>
+                                                                      </div>
+                                                                   </div>
+                                                                    <div class="form-group row pt-1">
+                                                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Nombre de mois d'assurance sur les 36 derniers mois</label>
+                                                                      <div class="col-xl-7 select">
+                                                                        <select class="select2">
+                                                                            <option value="">...</option>
+                                                                            <option value="Test">Test</option>
+                                                                        </select>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="form-group row pt-1">
+                                                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Sinistre déclaré sur les 36 derniers mois</label>
+                                                                      <div class="col-xl-7 select">
+                                                                        <select class="select2">
+                                                                            <option value="">...</option>
+                                                                            <option value="Test">Test</option>
+                                                                        </select>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="form-group row pt-1">
+                                                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center">Infraction sur les 5 dernières années</label>
+                                                                      <div class="col-xl-7 select">
+                                                                        <select class="select2">
+                                                                            <option value="">...</option>
+                                                                            <option value="Test">Test</option>
+                                                                        </select>
+                                                                      </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-3 col-xl-11 pb-4 pr-0 text-right">
+                                                                    <button class="btn btn-space btn-secondary gris pl-6 pr-6" type="button" data-wizard="#wizard1"><span></span>Retour</button>
+                                                                    <button class="btn btn-space btn-success violet pl-6 pr-6" type="button" data-wizard="#wizard1" disabled="true">Suivant</button>
+                                                                </div>
+                                                           </div>
+                                                           <div class="col-xl-2 align-self-center text-center d-none d-sm-none d-md-none d-xl-block chevron pt-4 pb-6 m-0">
+                                                                <button class="btn wizard-next disabled" type="button"><i class="icon mdi mdi-chevron-right disabled"></i></button>
+                                                           </div>
+                                                        </div>
+                                                      </form>
+                                                    </div>
+                                                   </div>
+                                                  </div>
+                                                  <div class="steps-container">
+                                                    <ul class="steps">
+                                                      <li class="active" data-step="1"></li>
+                                                      <li data-step="2"></li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col-xl-5 prix mb-8">
+                                                <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                    <div class="card card-default col-xl-9 col-11 mt-4 mb-3 p-0 text-center recapitulatif">
+                                                        <div class="pt-2 pb-0 ml-3 mr-3"> 
+                                                          <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Prix le plus bas proposé :</h4></span>
+                                                        </div>
+                                                        <div class="row justify-content-between bg-bouton pt-1 pb-sm-0 pb-xl-1 pb-1 pl-1 pr-1 m-0">
+                                                            <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                                <button class="btn btn-primary col-xl-12 bouton_prix" type="button">au tiers</button>
+                                                            </div>
+                                                            <div class="col-xl-4 col-sm-4 col-12 mb-1 mb-xl-0">
+                                                                <button class="btn btn-primary col-xl-12 bouton_prix" type="button">maxi</button>
+                                                            </div>
+                                                            <div class="col-xl-4 col-sm-4 col-12">
+                                                                <button class="btn btn-primary col-xl-12 bouton_prix" type="button">tous risques</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row justify-content-between pt-3 pb-3 pl-1 pr-1 pl-sm-0 pr-sm-0 m-0">
+                                                            <div class="col-xl-6 col-6 contrat text-left pr-1">
+                                                                <p>Contrat santé :</p>
+                                                            </div>
+                                                            <div class="col-xl-4 col-6 contrat text-right">
+                                                                <p>19,<span>99</span>€<span>*</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="ml-3 mr-3">
+                                                        <div class="row justify-content-between m-0 pl-1 pr-1 pl-sm-0 pr-sm-0">
+                                                            <div class="col-xl-4 col-6 total text-left">
+                                                                <p class="mb-1">€ Total :</p>
+                                                            </div>
+                                                            <div class="col-xl-4 col-6 total text-right">
+                                                                <p class="mb-1">19,<span>99</span>€<span>*</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-xl-end justify-content-center mr-xl-6 m-auto">
+                                                    <div class="col-xl-9 col-11 p-0">
+                                                        <div class="row justify-content-between m-0 p-0">
+                                                            <p class="p-0 ml-0 mt-0 mb-0 mensuel">*Prix mensuel</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="col-xl-12 global mb-8">
+                                    <div class="row">
+                                        <div class="col-xl-2 p-0">
+                                            <h3 class="ml-4 mb-8 titre">Prix global</h3>
+                                        </div>
+                                        <div class="col-xl-5 offset-xl-1 ml-2 mr-2">
+                                            <div class="card card-default col-xl-12 mt-0 mt-xl-6 mb-2 pt-1 pl-4 pr-4 text-center tarif">
+                                                <div class="pt-2 pb-0"> 
+                                                  <span class="title text-left titre_prix"><h4 class="mt-0 mb-2">Tarif total :</h4></span>
+                                                </div>
+                                                <div class="row justify-content-between align-items-center pt-3 pb-3 m-0">
+                                                    <div class="col-xl-6 col-6 contrat text-left pr-1 p-0">
+                                                        <p>Contrat auto :</p>
+                                                    </div>
+                                                    <div class="col-xl-4 col-6 contrat text-right p-0" id="total_nombre">
+                                                        <p>25,<span>99</span>€<span>*</span></p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row justify-content-between m-0 p-0">
+                                                    <div class="col-xl-4 col-6 total text-left p-0">
+                                                        <p class="mb-1">€ Total :</p>
+                                                    </div>
+                                                    <div class="col-xl-4 col-6 total text-right p-0" id="total_tarif">
+                                                        <p class="mb-1">25,<span>99</span>€<span>*</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <p class="ml-2 mt-0 mb-2 mensuel">*Prix mensuel</p>
+                                            </div>
+                                            <div class="col-xl-12 mt-4 p-0">
+                                                <div class="row justify-content-sm-between justify-content-center pl-3 pr-3 pl-sm-1 pr-sm-1">
+                                                    <button class="btn btn-primary btn-sm signer text-left pl-2 mt-2 ml-2 mr-2 ml-0 mr-0 mt-xl-0" id="signature" disabled="true">Signer le contrat<i class="icon icon-right mdi mdi-edit float-right pt-1 pr-1"></i></button>
+                                                    <button class="btn btn-secondary btn-sm enregistrer text-left mt-2 ml-2 mr-2 ml-0 mr-0 mt-xl-0 pl-2">Enregistrer le projet<i class="icon icon-right mdi mdi-floppy float-right pt-1 pr-1"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-10 offset-xl-1 offset-lg-1 align-self-center pl-6 pr-6 pb-0 pt-6 pt-xl-3">
+                                            <div class="row justify-content-center">
+                                                <div class="col-12 text-center p-0">
+                                                    <button class="btn btn-sm btn-primary mt-2 pl-2 ml-4 mr-4 telecharger text-left">Télécharger le document<i class="icon icon-right mdi mdi-download float-right pt-1 pr-1"></i></button> 
+                                                </div>
+                                                <div class="col-12 text-center p-0">
+                                                    <button class="btn btn-sm btn-primary mt-2 pl-2 ml-4 mr-4 envoyer text-left">Envoyer un devis<i class="icon icon-right mdi mdi-mail-send float-right pt-1 pr-1"></i></button>
+                                                </div>
+                                                <div class="col-12 text-center p-0">
+                                                    <button class="btn btn-sm btn-secondary mt-3 ml-4 mr-4 annuler">Annuler</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <hr class="col-xl-12 p-0 m-0 separateur">
+                                <div class="col-xl-12 client">
+                                    <h3 class="mb-6 titre">Informations personnelles du client</h3>
+                                    <form id="informations">
+                                        <div class="form-group row">
+                                          <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Nom</label>
+                                            <div class="input-group col-xl-3">
+                                                <input class="form-control nom" type="text">
+                                                <div class="input-group-append"><span class="input-group-text"><i class="mdi mdi-assignment-account"></i></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row pt-1">
+                                          <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Prénom</label>
+                                          <div class="col-xl-3">
+                                            <input class="form-control" id="inputText3" type="text">
+                                          </div>
+                                        </div>                  
+                                        <div class="form-group row pt-1 pb-0 pb-xl-1">
+                                          <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Adresse</label>
+                                          <div class="col-xl-3">
+                                            <input class="form-control" id="inputText3" type="text" placeholder="Rue">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row pt-0 pt-xl-1">
+                                          <label class="col-xl-4"></label>
+                                          <div class="col-xl-1 pb-2">
+                                            <input class="form-control" id="inputText3" type="text" placeholder="Code postal">
+                                          </div>
+                                          <div class="col-xl-2">
+                                            <input class="form-control" id="inputText3" type="text" placeholder="Ville">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row pt-1">
+                                          <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">E-mail</label>
+                                          <div class="col-xl-3">
+                                            <input class="form-control" id="inputText3" type="text">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row pt-1">
+                                          <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Téléphone</label>
+                                          <div class="col-xl-3">
+                                            <input class="form-control" id="inputText3" type="text">
+                                          </div>
+                                        </div>  
+                                        <div class="form-group row pt-1">
+                                          <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputPlaceholder3">Date de naissance</label>
+                                          <div class="col-xl-2">
+                                            <input class="form-control date datetimepicker" type="text" data-mask="date" placeholder="JJ/MM/AAAA" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                          </div>
+                                        </div>
+                                        <div class="mt-3 pr-2 col-xl-11 pb-4 text-center">
+                                            <button type="reset" class="btn btn-space btn-secondary gris pl-5 pr-5 mr-1"><i class="mdi mdi-refresh-alt pr-1"></i>Réinitialiser</button>
+                                            <button class="btn btn-space btn-primary violet pl-5 pr-5 ml-1">Enregistrer</button>
+                                        </div>
+                                    </form>
+                                </div>
+                        
+                                <div class="col-xl-12 resiliation">
+                                    <h3 class="mb-6 titre">Résiliation</h3>
+                                    <div class="form-group row">
+                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Nom de l'assureur</label>
+                                      <div class="col-xl-3 select">
+                                        <select class="select2">
+                                            <option value="...">...</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row pt-1">
+                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">N° du contrat</label>
+                                      <div class="col-xl-3">
+                                        <input class="form-control" id="inputPlaceholder3" type="text" placeholder="N°">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row pt-1">
+                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputPlaceholder3">Date d'échéance</label>
+                                      <div class="col-xl-2">
+                                        <input class="form-control date datetimepicker" type="text" data-mask="date" placeholder="JJ/MM/AAAA" data-min-view="2" data-date-format="dd-mm-yyyy">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Motif résiliation</label>
+                                      <div class="col-xl-3 select">
+                                        <select class="select2">
+                                            <option value="...">...</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row pt-1 pb-0 pb-xl-1">
+                                      <label class="col-xl-4 pt-0 pb-1 pb-xl-0 col-form-label text-xl-right text-left align-self-center" for="inputText3">Adresse</label>
+                                      <div class="col-xl-3">
+                                        <input class="form-control" id="inputText3" type="text" placeholder="Rue">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row pt-0 pt-xl-1">
+                                      <label class="col-xl-4"></label>
+                                      <div class="col-xl-1 pb-2">
+                                        <input class="form-control" id="inputText3" type="text" placeholder="Code postal">
+                                      </div>
+                                      <div class="col-xl-2">
+                                        <input class="form-control" id="inputText3" type="text" placeholder="Ville">
+                                      </div>
+                                    </div>
+                                    <div class="mt-3 pr-2 col-xl-11 pb-4 justify-content-center text-center">
+                                        <button class="btn btn-space btn-primary violet pl-5 pr-5 ml-1">Enregistrer</button>
+                                    </div>
+                                    <div class="mt-3 pr-2 col-xl-11 pb-4 text-center">
+                                        <button class="btn btn-sm btn-secondary ml-4 mr-4 mb-2 annuler">Annuler</button>
+                                        <button class="btn btn-primary btn-sm signer text-left pl-2 mb-2 ml-2 mr-2 ml-0 mr-0 mt-xl-0" id="signature" disabled="true">Signer le contrat<i class="icon icon-right mdi mdi-edit float-right pt-1 pr-1"></i></button>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+       </div>
+    </div>
+      
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+    <script src="assets/js/app-form-elements.js" type="text/javascript"></script>
+    <script src="assets/js/app-form-wizard.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/etape.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            App.init();
+            App.formElements();
+            App.wizard();
+        });
+    </script>
+  </body>
+</html>
