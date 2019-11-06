@@ -1,4 +1,4 @@
 # extranet
 Refonte du site de l'extranet "Speedtarif" en front
 
-Bootstrap
+Codé en HTML/CSS, Bootstrap, Javascript et jQuery.
